@@ -1,5 +1,3 @@
-# Network-File-Shares-and-Permissions
-
 <p align="center">
 <img src="https://i.imgur.com/npSuccP.png" height="30%" width="30%" alt="Network File"/>
 </p>
@@ -73,6 +71,57 @@ Leave the accounting folder for now.
 <img src="https://i.imgur.com/lVWxB8C.png" height="80%" width="80%" alt="9."/>
 </p>
 
+<p>
+<img src="https://i.imgur.com/EsqqGsx.png" height="80%" width="80%" alt="10."/>
+</p>
+
+<h3>Using Client-1 to access Network Folders</h3>
+Now, go into Client-1. Go into Windows File Explorer and type in "\\dc-1". From here, try to access the folders and observe the results for each one. 
+
+<p>
+<img src="https://i.imgur.com/07U1phZ.png" height="80%" width="80%" alt="11."/>
+</p>
+
+<p>
+<img src="https://i.imgur.com/e4r2ORL.png" height="80%" width="80%" alt="12."/>
+</p>
+
+<p>
+<img src="https://i.imgur.com/XZ5Nqsb.png" height="80%" width="80%" alt="13."/>
+</p>
+
+<p>
+<img src="https://i.imgur.com/0EtiZM7.png" height="80%" width="80%" alt="14."/>
+</p>
+
+<p>
+<img src="https://i.imgur.com/Q75dXmF.png" height="80%" width="80%" alt="15."/>
+</p>
+
+<h3>Create a New Group in Active Directory</h3>
+Log back into DC-1 and open Active Directory Users and Computers. Then go into the following: mydomain.com (domain that was created) -> _SECURITYGROUPS -> right click in the main window -> New -> Group. Then add "ACCOUNTANTS." Right click "ACCOUNTANTS" -> Properties -> Members -> add the random account you have created.
+
+<p></p>
+Next go back into Windows File Explorer. Go accounting folder -> right click -> Properties -> Sharing -> Add ACCOUNTANTS -> Read/Write Permissions.
+
+<p>
+<img src="https://i.imgur.com/qalaQBi.png" height="80%" width="80%" alt="16."/>
+</p>
+
+<p>
+<img src="https://i.imgur.com/Qxd7YaC.png" height="80%" width="80%" alt="17."/>
+</p>
+
+<p>
+<img src="https://i.imgur.com/4XywO9r.png" height="80%" width="80%" alt="19."/>
+</p>
+
+
+When it is done, go back into Client-1. Then attempt go into the accounting folder and you should be able to.
+
+<p>
+<img src="https://i.imgur.com/5IP6i7k.png" height="80%" width="80%" alt="21."/>
+</p>
 
 
 This exercise should have give you some intuition on how to create network files and set the permissions. Thank you checking out my tutorial! 
